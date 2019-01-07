@@ -1,0 +1,43 @@
+#rodapeEscuro{
+	background-color: #2B2B2B;
+	width: auto;
+	height: 200px;
+}
+
+.nav{
+    background-color: #FFFFFF;
+    font-family:  'Tahoma', sans-serif; font-weight: 100;
+    
+    font-size: 16px;
+    color: #2B2B2B;
+    position: relative;
+
+    width: auto;
+    height: auto;
+   
+    display: grid;
+    line-height:100px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 4px;
+   
+}
+
+
+a.nounderline:link 
+{
+    text-decoration:none; 
+    text-decoration-color: rgb(20, 20, 20);
+} 
+
+.logo{
+    width: 100px;
+    height: auto;
+}
+
+#linha{
+    border-bottom: 3px solid;
+}
+#xia{
+    padding-left: 100px;
+
+}
