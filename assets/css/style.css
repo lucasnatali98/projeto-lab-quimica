@@ -6,7 +6,7 @@
 
 .nav{
     background-color: #FFFFFF;
-    font-family:  'Tahoma', sans-serif; font-weight: 100;
+    font-family:  'NowRegular', sans-serif; font-weight: 100;
     
     font-size: 16px;
     color: #2B2B2B;
@@ -16,7 +16,7 @@
     height: auto;
    
     display: grid;
-    line-height:100px;
+    line-height: 50px;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 4px;
    
@@ -34,10 +34,14 @@ a.nounderline:link
     height: auto;
 }
 
-#linha{
-    border-bottom: 3px solid;
-}
+
 #xia{
     padding-left: 100px;
 
+}
+
+.img_inicial{
+    padding:5%;
+    margin-top: 40px;
+    
 }
