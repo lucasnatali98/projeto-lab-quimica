@@ -6,11 +6,11 @@
 </title>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1,
-		shrink-to-fit=no">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1,	shrink-to-fit=no">
+	<link rel="stylesheet" href="http://localhost/projeto-lab-quimica/assets/css/bootstrap.min.css">
 
 	<link href=" http://localhost/projeto-lab-quimica/assets/css/style.css " rel="stylesheet">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/now" type="text/css"/>
 	
 
 	

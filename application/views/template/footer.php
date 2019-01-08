@@ -3,7 +3,7 @@
 </div>
 <!-- Footer -->
 
-<footer class="page-footer font-small unique-color-dark"style="background-color: #2B2B2B;">
+<footer class="page-footer font-small unique-color-dark"style="background-color: #2B2B2B; font-family:  'NowRegular', sans-serif;">
 
 
 
@@ -14,7 +14,7 @@
       <div class="row mt-3">
 
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 p-5">
 
           <!-- Content -->
           <h6 class="text-uppercase font-weight-bold mt-3 mb-1" style="color:#FF6D1A;">Sobre</h6>
@@ -26,34 +26,15 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
-          <!-- Links -->
-          <h6 class="text-uppercase font-weight-bold mt-3" style="color:#FF6D1A;">Contato</h6>
-          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p style="color:#FFFFFF;">
-            Email: exemplo@email.com.br
-          </p style="color:#FFFFFF;">
-          <p style="color:#FFFFFF;">
-            Telefone: 9999-9999
-          </p>
-          <p style="color:#FFFFFF;">
-            Instituto de Ciências Exatas e Biológicas - ICEB - Sala 00
-          </p>
-         
-
-        </div>
-        <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <div class="col-md-3 mb-4 mx-auto p-5">
 
           <!-- Links -->
-          <!-- Link<h6 class="text-uppercase font-weight-bold">Useful links</h6> -->
-          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
 			<div class ="mt-3">
-				<h3 style="color:#374D99;"> DEQUI </h3>
-		   		<h5 style="color:#374D99;"> Departamento de Quimíca</hr>
+      <img src=" http://localhost/projeto-lab-quimica/assets/img/DEQUI_logo.png" style="width:100%;">
 
 			</div>
 		  
@@ -62,12 +43,11 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 mb-md-0 mb-4">
+        <div class="ccol-md-3 mb-4 mx-auto p-5">
 
           <!-- Links -->
           
-		  <img src=" http://localhost/projeto-lab-quimica/assets/img/ufop-logo.jpg " class="logo" >
-		  <span><h3 style="color:#FFFFFF;"> Universidade Federal De Ouro Preto </h3></span>
+          <img src=" http://localhost/projeto-lab-quimica/assets/img/Ufop_Logotipo.png" style="width:100%;">
 
         </div>
         <!-- Grid column -->
@@ -79,7 +59,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">Desenvolvido por Voluta Soluções Digitais -2019. Todos direitos reservados </div>
+    <div class="footer-copyright text-center py-3 bg-white" style="color:#374D99">Desenvolvido por Voluta Soluções Digitais -2019. Todos direitos reservados </div>
     <!-- Copyright -->
 
 </footer>
