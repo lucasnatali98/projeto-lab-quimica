@@ -3,7 +3,7 @@
 </div>
 <!-- Footer -->
 
-<footer class="page-footer font-small unique-color-dark"style="background-color: #2B2B2B; font-family:  'NowRegular', sans-serif;">
+<footer class="page-footer font-small unique-color-dark" style="background-color: #2B2B2B; font-family:  'NowRegular', sans-serif;">
 
 
 
@@ -34,7 +34,7 @@
           <!-- Links -->
 
 			<div class ="mt-3">
-      <img src=" http://localhost/projeto-lab-quimica/assets/img/DEQUI_logo.png" style="width:100%;">
+      <img src="<?php echo base_url('/assets/img/DEQUI_logo.png'); ?>" style="width:100%;">
 
 			</div>
 		  
@@ -47,7 +47,7 @@
 
           <!-- Links -->
           
-          <img src=" http://localhost/projeto-lab-quimica/assets/img/Ufop_Logotipo.png" style="width:100%;">
+          <img src="<?php echo base_url('/assets/img/Ufop_Logotipo.png'); ?>" style="width:100%;">
 
         </div>
         <!-- Grid column -->
