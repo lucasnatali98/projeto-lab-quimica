@@ -34,7 +34,7 @@
           <!-- Links -->
 
 			<div class ="mt-3">
-      <img src="<?php echo base_url('/assets/img/DEQUI_logo.png'); ?>" style="width:100%;">
+      <img src="<?php echo base_url('/assets/frontend/img/DEQUI_logo.png'); ?>" style="width:100%;">
 
 			</div>
 		  
@@ -47,7 +47,7 @@
 
           <!-- Links -->
           
-          <img src="<?php echo base_url('/assets/img/Ufop_Logotipo.png'); ?>" style="width:100%;">
+          <img src="<?php echo base_url('/assets/frontend/img/Ufop_Logotipo.png'); ?>" style="width:100%;">
 
         </div>
         <!-- Grid column -->
