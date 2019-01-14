@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-</div>
 <!-- Footer -->
 
 <footer class="page-footer font-small unique-color-dark" style="background-color: #2B2B2B; font-family:  'NowRegular', sans-serif;">
@@ -64,4 +61,3 @@
 
 </footer>
   <!-- Footer -->
-</html>
