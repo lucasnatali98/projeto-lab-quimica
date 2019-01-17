@@ -16,6 +16,7 @@
         }
 
         public function listar_projeto($id){
+            $this->db->order_by('titulo','ASC');
             $this->db->from('projeto');
             $this->db->where('md5(id)',$id);
             return $this->db->get()->result();

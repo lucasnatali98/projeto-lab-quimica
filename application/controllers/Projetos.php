@@ -7,8 +7,9 @@
             $this->load->model('projetos_model','modelprojetos');
         }
         
-        public function index(){
+        public function index($id, $slug=null){
             $dados['listaprojetos'] = $this->modelprojetos->listar_projetos();
+            $dados['listaprojeto'] = $this->modelprojetos->listar_projeto($id);
             
             $this->load->view('frontend/template/html-header', $dados);
             $this->load->view('frontend/template/header');
