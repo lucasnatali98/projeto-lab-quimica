@@ -9,7 +9,7 @@
 					<li class="nav-item"><a class ="nounderline" href="<?php echo base_url() ?>">Produções</a></li>
 					<li class="nav-item"><a class ="nounderline" href="<?php echo base_url() ?>">Eventos</a></li>
 					<li class="nav-item"><a class ="nounderline" href="<?php echo base_url() ?>">Galeria</a></li>
-					<li class="nav-item"><a class ="nounderline" href="<?php echo base_url() ?>">Pessoal</a></li>
+					<li class="nav-item active"><a class ="nounderline" href="<?php echo base_url('/pessoal') ?>">Pessoal</a></li>
 					<li class="nav-item"><a class ="nounderline" href="<?php echo base_url() ?>">Contatos</a></li>
 							
 			</ul>		
