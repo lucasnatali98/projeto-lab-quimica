@@ -12,6 +12,7 @@
 	<link href="<?php echo base_url('/assets/frontend/css/style.css'); ?>" rel="stylesheet">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/now" type="text/css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	
 </head>

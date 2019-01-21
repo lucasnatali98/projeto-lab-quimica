@@ -8,7 +8,7 @@
         {
             $this->load->view('frontend/template/html-header');
             $this->load->view('frontend/template/header');
-            $this->load-> view('frontend/eventos'); //carrega o arquivo home dentro da pasta view
+            $this->load-> view('frontend/eventos'); //carrega o arquivo eventos dentro da pasta view
             $this->load->view('frontend/template/footer');
             $this->load->view('frontend/template/html-footer');
         }
