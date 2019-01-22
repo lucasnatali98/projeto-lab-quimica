@@ -1,3 +1,7 @@
+*{
+    text-decoration: none;
+}
+
 .page-header{
     margin-top: 2%;
     margin-left: 10%;
@@ -65,4 +69,91 @@ a.nounderline:link
     padding:5%;
     margin-top: 40px;
     
+}
+
+
+
+/*
+ PRODUÇÕES e EVENTOS
+*/
+.card-header{
+    background-color: #fff;
+    border-bottom-color: transparent;
+}
+.card{
+    margin-bottom: 35px;
+    border-color: #333;
+    border-width: 2px;
+}
+#producoes{
+    padding: 10%;
+    padding-top: 7%;
+    padding-bottom: 5%;
+}
+.anos ul{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type:none;
+    padding-inline-start:0px;
+}
+.anos ul li a{
+ text-decoration: none;
+ font-size: 18px;
+ color: #999;
+ font-weight: 150;
+}
+.anos ul li a:hover{
+    font-size: 17px;
+    color: #333;
+}
+.anoTxt{
+    color: #FF6D1A;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.mb-0{
+   font-size: 20px;
+   font-weight: bold;
+   color: #222;
+}
+
+#producoes .subtitle{
+    font-size: 30px;
+    color: #222;
+    margin-bottom: 20px;
+}
+.card-header a{
+    text-decoration: none;
+}
+.card-header a i{
+    float: right;
+}
+.anoTxt,.card-body, .mb-0, #producoes .subtitle, .anos ul li a{
+    font-family: 'NowRegular', sans-serif;
+}
+.btn-galeria{
+    padding: 10px;
+    background: #FF6D1A;
+    color: #fff;
+    border-color: #555;
+    border-width: 1.3px;
+    float: right;
+    margin-bottom: 20px;
+}
+.media-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.media-div img{
+    width: auto;
+    height: 200px;
+}
+.media-div button{
+    width: 25%;    
 }
