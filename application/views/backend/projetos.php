@@ -55,7 +55,26 @@
                                 foreach($listaprojetos as $projeto){
                                     $nomeproj= $projeto->titulo;
                                     $alterar= anchor(base_url('admin/projetos/alterar/'.md5($projeto->id)), '<i class="fa fa-refresh fa-fw"></i> Alterar');
-                                    $excluir=anchor(base_url('admin/projetos/excluir/'.md5($projeto->id)), '<span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span>');
+
+                                    $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$projeto->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
+                                    echo $modal= ' <div class="modal fade excluir-modal-'.$projeto->id.'" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de projeto</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h4>Deseja Realmente excluir o projeto '.$projeto->titulo.'?</h4>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/projetos/excluir/".md5($projeto->id)).'">Excluir</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>';
 
                                     $this->table->add_row($nomeproj, $alterar, $excluir);
                                 }
