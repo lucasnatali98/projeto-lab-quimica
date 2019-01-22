@@ -74,7 +74,7 @@ a.nounderline:link
 
 
 /*
- EVENTOS
+ PRODUÇÕES e EVENTOS
 */
 .card-header{
     background-color: #fff;
@@ -85,7 +85,7 @@ a.nounderline:link
     border-color: #333;
     border-width: 2px;
 }
-#eventos{
+#producoes{
     padding: 10%;
     padding-top: 7%;
     padding-bottom: 5%;
@@ -97,8 +97,6 @@ a.nounderline:link
     justify-content: space-between;
     list-style-type:none;
     padding-inline-start:0px;
-
-
 }
 .anos ul li a{
  text-decoration: none;
@@ -110,11 +108,11 @@ a.nounderline:link
     font-size: 17px;
     color: #333;
 }
-
 .anoTxt{
     color: #FF6D1A;
     font-size: 25px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 .mb-0{
    font-size: 20px;
@@ -122,18 +120,18 @@ a.nounderline:link
    color: #222;
 }
 
-#eventos .subtitle{
+#producoes .subtitle{
     font-size: 30px;
     color: #222;
     margin-bottom: 20px;
 }
-.card-header a i{
-    float: right;
-}
 .card-header a{
     text-decoration: none;
 }
-.anoTxt,.card-body, .mb-0, #eventos .subtitle, .anos ul li a{
+.card-header a i{
+    float: right;
+}
+.anoTxt,.card-body, .mb-0, #producoes .subtitle, .anos ul li a{
     font-family: 'NowRegular', sans-serif;
 }
 .btn-galeria{
@@ -144,4 +142,18 @@ a.nounderline:link
     border-width: 1.3px;
     float: right;
     margin-bottom: 20px;
+}
+.media-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.media-div img{
+    width: auto;
+    height: 200px;
+}
+.media-div button{
+    width: 25%;    
 }

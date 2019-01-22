@@ -1,5 +1,5 @@
-<div id="eventos">
-  <h2 class="subtitle">Eventos</h2>
+<div id="producoes">
+  <h2 class="subtitle">Produções</h2>
   <div class="anos">
       <ul>
         <li> <a href="#">2019 </a></li>
@@ -29,7 +29,7 @@
     <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
       aria-controls="collapseOne1">
       <h5 class="mb-0">
-      Evento 1 <i class="fa fa-angle-down rotate-icon"></i>
+      Produção 1 <i class="fa fa-angle-down rotate-icon"></i>
       </h5>
     </a>
   </div>
@@ -45,7 +45,14 @@
       farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
       labore sustainable VHS.
       <br>
-      <button class="btn-galeria"> Abrir Galeria de fotos </button>
+      <div class="media-div">
+        <img src="<?php echo base_url('/assets/frontend/img/logo1.jpg'); ?>" />
+        <img src="<?php echo base_url('/assets/frontend/img/logo2.jpg'); ?>" />
+        <img src="<?php echo base_url('/assets/frontend/img/logo3.jpg'); ?>" />
+        
+        <button class="btn-galeria"> Abrir </button>
+      </div>
+      
     </div>
   </div>
 
@@ -60,7 +67,7 @@
     <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
       aria-expanded="false" aria-controls="collapseTwo2">
       <h5 class="mb-0">
-      Evento 2 <i class="fa fa-angle-down rotate-icon"></i>
+      Produção 2 <i class="fa fa-angle-down rotate-icon"></i>
       </h5>
     </a>
     
@@ -77,7 +84,13 @@
       farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
       labore sustainable VHS.
       <br>
-      <button class="btn-galeria"> Abrir Galeria de fotos </button>
+      <div class="media-div">
+        <img src="<?php echo base_url('/assets/frontend/img/logo1.jpg'); ?>" />
+        <img src="<?php echo base_url('/assets/frontend/img/logo2.jpg'); ?>" />
+        <img src="<?php echo base_url('/assets/frontend/img/logo3.jpg'); ?>" />
+        
+        <button class="btn-galeria"> Abrir </button>
+      </div>
     </div>
   </div>
 
@@ -92,7 +105,7 @@
     <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
       aria-expanded="false" aria-controls="collapseThree3">
       <h5 class="mb-0">
-      Evento 3 <i class="fa fa-angle-down rotate-icon"></i>
+      Produção 3 <i class="fa fa-angle-down rotate-icon"></i>
       </h5>
     </a>
   </div>
@@ -108,7 +121,13 @@
       farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
       labore sustainable VHS.
       <br>
-      <button class="btn-galeria"> Abrir Galeria de fotos </button>
+      <div class="media-div">
+        <img src="<?php echo base_url('/assets/frontend/img/logo1.jpg'); ?>" />
+        <img src="<?php echo base_url('/assets/frontend/img/logo2.jpg'); ?>" />
+        <img src="<?php echo base_url('/assets/frontend/img/logo3.jpg'); ?>" />
+        
+        <button class="btn-galeria"> Abrir </button>
+      </div>
     </div>
   </div>
 
