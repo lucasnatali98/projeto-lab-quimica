@@ -6,10 +6,12 @@
             $this->load->model('pessoal_model','modelpessoal');
         }
         
-        public function index()
+        public function index($id, $slug = null)
         {
             $dados['listapessoal'] = $this->modelpessoal->listar_pessoas();
             
+            $dados['listapessoa'] = $this->modelpessoal->listar_pessoa($id);
+
             $this->load->view('frontend/template/html-header');
             $this->load->view('frontend/template/header');
             $this->load-> view('frontend/pessoal'); //carrega o arquivo projetos dentro da pasta view

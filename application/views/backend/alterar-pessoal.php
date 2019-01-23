@@ -18,19 +18,28 @@
                             <?php
                             echo validation_errors('<div class="alert alert-danger">','</div>');
                             echo form_open('admin/pessoal/salvar_alteracoes');
-                            foreach($listapessoal as $pessoal){
+                            
+                            foreach($this->modelpessoal->listar_pessoas() as $pessoal){
+                               
+                                   
                             ?>
                             <div class="form-group">
                                 <label id="txt-nome">Nome</label>
-                                <input type="text" id="txt-nome" name="txt-nome" class="form-control" placeholder="Informe o nome..." value="<?php echo $pessoal->nome ?>">
+                                    <input type="text" id="txt-nome" name="txt-nome" class="form-control" placeholder="Informe o nome..." value="<?php echo $pessoal->nome ?>">
                                 </br>
                                 <label id="txt-cargo">Cargo</label>
-                                <input type="text" id="txt-cargo" name="txt-cargo" class="form-control" placeholder="Informe o cargo atual..." value="<?php echo $pessoal->cargo ?>">
+                                    <input type="text" id="txt-cargo" name="txt-cargo" class="form-control" placeholder="Informe o cargo atual..." value="<?php echo $pessoal->cargo ?>">
                                 </br>
+                                <label id="txt-lattes">Lattes</label>
+                                    <input type="text" name="txt-lattes" class="form-control" placeholder="Entre com a URL para o lattes..." value="<?php echo $pessoal->lattes ?>">
+                                </br>
+                                
+                                
                             </div>
                             <input type="hidden" name="txt-id" id="txt-id" value="<?php echo $pessoal->id ?>">
                             <button type="submit" class="btn btn-success">Atualizar</button>
                             <?php
+                            
                             }
                             echo form_close();
                             ?>
