@@ -18,6 +18,8 @@
                             <?php
                             echo validation_errors('<div class="alert alert-danger">','</div>');
                             echo form_open('admin/pessoal/inserir');
+                            
+                            
                             ?>
                             <div class="form-group">
                                 <label id="txt-nome">Nome</label>
@@ -26,13 +28,17 @@
                                 <label id="txt-cargo">Cargo</label>
                                     <input type="text" id="txt-cargo" name="txt-cargo" class="form-control" placeholder="Informe seu cargo atual...">
                                 </br>
-                                <label for="exampleFormControlFile1">Foto</label>
-                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" placeholder="Insira a foto...">
+                                <label id="txt-lattes">Lattes</label>
+                                    <input type="text" id="txt-lattes" name="txt-lattes" class="form-control" placeholder="Informe o lattes:...">
+                                </br>
+                                <label id="txt-foto">Foto</label>
+                                    <input type="file" id="txt-foto" name="txt-foto" class="form-control-file">
+                                  
                                 </br>
                             </div>
                             <button type="submit" class="btn btn-success">Salvar</button>
                             <?php
-                            echo form_close();
+                                echo form_close();
                             ?>
                         </div>
 
@@ -54,14 +60,23 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $this->table->set_heading("Nome", "Cargo","Alterar", "Excluir");
+                                $this->table->set_heading("Nome", "Cargo","Lattes","Alterar", "Excluir");
+                                
                                 foreach($listapessoal as $pessoal){
+                                
                                     $nome= $pessoal->nome;
                                     $cargo = $pessoal->cargo;
+                                    $lattes = $pessoal->lattes;
+                                   
+
                                     $alterar= anchor(base_url('admin/pessoal/alterar/'.md5($pessoal->id)), '<i class="fa fa-refresh fa-fw"></i> Alterar');
                                     $excluir=anchor(base_url('admin/pessoal/excluir/'.md5($pessoal->id)), '<span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span>');
 
-                                    $this->table->add_row($nome, $cargo, $alterar, $excluir);
+                                    $this->table->add_row($nome, $cargo,$lattes, $alterar, $excluir);
+
+                                   
+
+                                    
                                 }
                                 $this->table->set_template(array('table_open' => '<table class="table table-striped">'));
                                    echo $this->table->generate();
