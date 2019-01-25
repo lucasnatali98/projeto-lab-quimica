@@ -71,6 +71,24 @@ a.nounderline:link
     
 }
 
+/*EVENTOS*/
+.evento h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.evento p{
+    font-size: 18px;
+    font-family: 'NowRegular', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.evento center img{
+    margin-top: 10px;
+    width: 100%;
+}
 
 
 /*
@@ -91,7 +109,6 @@ a.nounderline:link
     padding-bottom: 5%;
 }
 .anos ul{
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -131,7 +148,7 @@ a.nounderline:link
 .card-header a i{
     float: right;
 }
-.anoTxt,.card-body, .mb-0, #producoes .subtitle, .anos ul li a{
+.anoTxt,.card-body, .mb-0, #producoes .subtitle, #eventos .subtitle, .anos ul li a{
     font-family: 'NowRegular', sans-serif;
 }
 .btn-galeria{

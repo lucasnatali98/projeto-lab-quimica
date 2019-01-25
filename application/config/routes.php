@@ -54,3 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['projetos'] = 'projetos/index/';
 $route['pessoal'] = 'pessoal/index/';
+$route['eventos'] = 'eventos/index/';
+
