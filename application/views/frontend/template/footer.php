@@ -45,7 +45,10 @@
           <!-- Links -->
           
           <img src="<?php echo base_url('/assets/frontend/img/Ufop_Logotipo.png'); ?>" style="width:100%;">
-
+          <br><br><br>
+          <div>
+          <a class="nounderline" href="<?php echo base_url('/admin') ?>"><b> Area administrativa - Login </b></a>
+          </div>
         </div>
         <!-- Grid column -->
 
