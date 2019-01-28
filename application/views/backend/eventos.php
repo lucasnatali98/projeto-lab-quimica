@@ -26,6 +26,16 @@
                                 <label id="txt-descricao">Descrição do evento</label>
                                 <input type="text" id="txt-descricao" name="txt-descricao" class="form-control" placeholder="Informe a descrição do evento...">
                                 </br>
+                                <?php 
+                                    echo form_open('admin/eventos/nova_foto');
+                                ?>
+                                    <label id="txt-img">Imagem do evento</label>
+                                    <input type="file" class="form-control" id="txt-img" name="txt-img">
+                                
+                                <?php
+                                    echo form_close();
+                                ?>
+                                </br>   
                             </div>
                             <button type="submit" class="btn btn-success">Salvar</button>
                             <?php
