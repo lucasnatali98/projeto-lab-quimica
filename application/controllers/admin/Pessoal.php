@@ -43,35 +43,18 @@ class Pessoal extends CI_Controller {
 			$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()@#$!%¨&*?+="[]{}-<>;^~§º¬°¢£³²¹ª|'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY___________________________________');;
 			$configuracao['upload_path'] = './assets/frontend/img/pessoas/';
 			$configuracao['allowed_types'] = 'jpg|png|jpeg';
-			
-			$configuracao['width'] = 200;
-			$configuracao['height'] = 200;
-			$configuracao['create_thumb'] = FALSE;
 			$configuracao['file_name'] = $new_name;
-			$this->load->library('upload', $configuracao);
-			
+			$this->load->library('upload', $configuracao);	
 			$this->upload->initialize($configuracao);
-			
-			
+		
 				if($this->upload->do_upload('txt-foto')){
-				
 					if($this->modelpessoal->adicionar($nome, $cargo, $lattes, $new_name)){
-						
 							redirect(base_url('admin/pessoal'));
-						
-						
 					}else{
 						echo "Houve um erro no sistema!";
 					}
-				
-				
 			}
-			
-			
 		}
-					
-			
-		
 	}
 
 	public function excluir($id){
@@ -84,7 +67,7 @@ class Pessoal extends CI_Controller {
 
 	public function alterar($id){
 		$this->load->library('table');
-        $dados['listapessoa'] = $this->modelpessoal->listar_pessoa($id);
+        $dados['listapessoal'] = $this->modelpessoal->listar_pessoa($id);
 
 		$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Pessoal';
@@ -152,10 +135,7 @@ class Pessoal extends CI_Controller {
             if($this->upload->do_upload('txt-foto')){
                 if($this->modelupload->nova_foto($id, $new_name)){
 
-				
 						redirect(base_url('admin/pessoal'));
-					
-                    
                 }
             }else{
                 echo "Houve um erro no sistema!";
