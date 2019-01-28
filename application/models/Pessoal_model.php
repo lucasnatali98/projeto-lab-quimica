@@ -6,7 +6,7 @@
         public $nome;
         public $cargo;
         public $lattes;
-       // public $foto;
+        public $foto;
         
 
         public function __construct(){
@@ -24,11 +24,11 @@
             return $this->db->get()->result();
         }
 
-        public function adicionar($nome, $cargo, $lattes){
+        public function adicionar($nome, $cargo, $lattes, $foto){
             $dados['nome'] = $nome;
             $dados['cargo'] = $cargo;
             $dados['lattes'] = $lattes;
-          //  $dados['foto'] = $foto;
+            $dados['foto'] = $foto;
             
             
             return $this->db->insert('pessoal',$dados); 
@@ -39,14 +39,20 @@
             return $this->db->delete('pessoal');
         }
 
-        public function alterar($id, $nome, $cargo, $lattes){
+        public function alterar($id, $nome, $cargo, $lattes, $foto){
             $dados['nome'] = $nome;
             $dados['cargo'] = $cargo;
             $dados['lattes'] = $lattes;
-            //$dados['foto'] = $foto;
+            $dados['foto'] = $foto;
             
             $this->db->where('id',$id);
             return $this->db->update('pessoal', $dados);
+        }
+
+        public function nova_foto($id, $foto){
+            $dados['foto'] = $foto;
+          $this->db->where('id',$id);
+          return $this->db->update('pessoal',$dados);
         }
 
         
