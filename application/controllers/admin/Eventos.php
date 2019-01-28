@@ -5,7 +5,9 @@ class Eventos extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		
+		if(!$this->session->userdata('logado')){
+			redirect(base_url('admin/login'));
+		}
 		$this->load->model('eventos_model','modeleventos');
 	}
 

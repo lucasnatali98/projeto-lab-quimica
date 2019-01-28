@@ -55,4 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['projetos'] = 'projetos/index/';
 $route['pessoal'] = 'pessoal/index/';
 $route['eventos'] = 'eventos/index/';
+$route['admin/login'] = 'admin/usuarios/pag_login';
 
