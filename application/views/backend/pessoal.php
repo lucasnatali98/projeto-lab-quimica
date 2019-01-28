@@ -17,7 +17,7 @@
                         <div class="col-lg-12">
                             <?php
                             echo validation_errors('<div class="alert alert-danger">','</div>');
-                            echo form_open('admin/pessoal/inserir');
+                            echo form_open_multipart('admin/pessoal/inserir');
                             
                             
                             ?>

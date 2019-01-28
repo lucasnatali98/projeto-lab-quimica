@@ -39,7 +39,6 @@ class Pessoal extends CI_Controller {
 			$cargo = $this->input->post('txt-cargo');
 			$lattes = $this->input->post('txt-lattes');
 
-			
 			$original_name = $_FILES['txt-foto']['name'];
 			$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ()@#$!%¨&*?+="[]{}-<>;^~§º¬°¢£³²¹ª|'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY___________________________________');;
 			$configuracao['upload_path'] = './assets/frontend/img/pessoas/';
