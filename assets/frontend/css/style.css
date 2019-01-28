@@ -62,6 +62,11 @@ a.nounderline:link
 
 .corrente{
     background-color:#3172d5;
+}
+
+.nav-tabs>li.active>a {
+    background-color: #037c1d !important;
+}
 
 /*EVENTOS*/
 .evento h2{

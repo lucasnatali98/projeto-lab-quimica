@@ -14,34 +14,27 @@
 
 					<?php $paginaCorrente = basename($_SERVER['SCRIPT_NAME']);?>
 					<div class="navbar-collapse collapse" id="nav10">
-						<ul class = "navbar-nav ">
-							<li class="nav-item navegacao <?php
-									if($paginaCorrente == base_url()) 
-									{
-										echo 'class="corrente"';
-								}?>">
-								<a class ="nav-link" href="<?php echo base_url()?>"
-								>
-								Home
-								</a>
+						<ul class = "navbar-nav active">
+							<li class="nav-item navegacao">
+								<a class ="nav-link" href="<?php echo base_url()?>">Home</a>
 							</li>
 							<li class="nav-item navegacao">
 								<a class ="nav-link" href="<?php echo base_url('/projetos') ?>">Projetos</a>
 							</li>
 							<li class="nav-item navegacao">
-								<a class ="nav-link" href="<?php echo base_url() ?>">Produções</a>
+								<a class ="nav-link" href="<?php echo base_url('/producoes') ?>">Produções</a>
 							</li>
 							<li class="nav-item navegacao">
-								<a class ="nav-link" href="<?php echo base_url() ?>">Eventos</a>
+								<a class ="nav-link" href="<?php echo base_url('/eventos') ?>">Eventos</a>
 							</li>
 							<li class="nav-item navegacao">
-								<a class ="nav-link" href="<?php echo base_url() ?>">Galeria</a>
+								<a class ="nav-link" href="<?php echo base_url('/galeria') ?>">Galeria</a>
 							</li>
 							<li class="nav-item navegacao">
 								<a class ="nav-link" href="<?php echo base_url('/pessoal') ?>">Pessoal</a>
 							</li>
 							<li class="nav-item navegacao">
-								<a class ="nav-link" href="<?php echo base_url() ?>">Contatos</a>
+								<a class ="nav-link" href="<?php echo base_url('/contatos') ?>">Contatos</a>
 							</li>
 						</ul>
 					</div>
@@ -49,8 +42,7 @@
 			</div>
 		</div>
 	</div>
-
-
 		
-		
-
+<p>
+<?php echo $paginaCorrente ?>
+</p>
