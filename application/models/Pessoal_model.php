@@ -5,8 +5,9 @@
         public $id;
         public $nome;
         public $cargo;
-        //public $foto;
-        //public $lattes;
+        public $lattes;
+       // public $foto;
+        
 
         public function __construct(){
             parent::__construct();
@@ -23,9 +24,13 @@
             return $this->db->get()->result();
         }
 
-        public function adicionar($nome, $cargo){
+        public function adicionar($nome, $cargo, $lattes){
             $dados['nome'] = $nome;
             $dados['cargo'] = $cargo;
+            $dados['lattes'] = $lattes;
+          //  $dados['foto'] = $foto;
+            
+            
             return $this->db->insert('pessoal',$dados); 
         }
 
@@ -34,11 +39,16 @@
             return $this->db->delete('pessoal');
         }
 
-        public function alterar($id, $nome, $cargo){
+        public function alterar($id, $nome, $cargo, $lattes){
             $dados['nome'] = $nome;
             $dados['cargo'] = $cargo;
+            $dados['lattes'] = $lattes;
+            //$dados['foto'] = $foto;
+            
             $this->db->where('id',$id);
             return $this->db->update('pessoal', $dados);
         }
+
+        
     }   
 ?>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Jan-2019 às 22:34
--- Versão do servidor: 10.1.36-MariaDB
--- versão do PHP: 7.2.10
+-- Generation Time: 26-Jan-2019 às 02:20
+-- Versão do servidor: 10.1.35-MariaDB
+-- versão do PHP: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,6 +35,29 @@ CREATE TABLE `cadastro` (
   `senha` varchar(100) NOT NULL,
   `tipoConta` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `ci_session`
+--
+
+CREATE TABLE `ci_session` (
+  `id` varchar(40) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `ci_session`
+--
+
+INSERT INTO `ci_session` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('b7djgcivu394j93mp12nrr802g4c6s97', '::1', 1548465364, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383436353336343b757365726c6f6761646f7c4f3a383a22737464436c617373223a323a7b733a343a2275736572223b733a383a22566f6c7574615344223b733a353a2273656e6861223b733a383a22696e6f7661727364223b7d6c6f6761646f7c623a313b),
+('hjv670himds07b526f7r0p1guqv6nci9', '::1', 1548464426, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383436343432363b757365726c6f6761646f7c4f3a383a22737464436c617373223a323a7b733a343a2275736572223b733a383a22566f6c7574615344223b733a353a2273656e6861223b733a383a22696e6f7661727364223b7d6c6f6761646f7c623a313b),
+('map1dfsbinvvv3ga6m4bsi51pap9k7gl', '::1', 1548465401, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383436353336343b757365726c6f6761646f7c4f3a383a22737464436c617373223a323a7b733a343a2275736572223b733a383a22566f6c7574615344223b733a353a2273656e6861223b733a383a22696e6f7661727364223b7d6c6f6761646f7c623a303b),
+('ttc8esjornr5ppa402jr4n658s5lieod', '::1', 1548464115, 0x5f5f63695f6c6173745f726567656e65726174657c693a313534383436343131353b);
 
 -- --------------------------------------------------------
 
@@ -112,6 +135,13 @@ CREATE TABLE `pessoal` (
   `lattes` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `pessoal`
+--
+
+INSERT INTO `pessoal` (`id`, `nome`, `cargo`, `foto`, `lattes`) VALUES
+(1, 'Joao', 'Presidente', '', '122131233112331313313333131312312');
+
 -- --------------------------------------------------------
 
 --
@@ -139,6 +169,32 @@ CREATE TABLE `projeto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Extraindo dados da tabela `projeto`
+--
+
+INSERT INTO `projeto` (`id`, `titulo`, `descricao`) VALUES
+(20, 'Primeiro projeto', 'Este é o primeiro projeto da pós graduação em química'),
+(24, 'Segundo projeto', 'Este é o segundo projeto da pós graduação em química');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `user` varchar(80) NOT NULL,
+  `senha` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`user`, `senha`) VALUES
+('VolutaSD', 'inovarsd');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -147,6 +203,13 @@ CREATE TABLE `projeto` (
 --
 ALTER TABLE `cadastro`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ci_session`
+--
+ALTER TABLE `ci_session`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
 -- Indexes for table `contato`
@@ -197,6 +260,12 @@ ALTER TABLE `projeto`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`user`,`senha`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -240,7 +309,7 @@ ALTER TABLE `home`
 -- AUTO_INCREMENT for table `pessoal`
 --
 ALTER TABLE `pessoal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `producao`
@@ -252,7 +321,7 @@ ALTER TABLE `producao`
 -- AUTO_INCREMENT for table `projeto`
 --
 ALTER TABLE `projeto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

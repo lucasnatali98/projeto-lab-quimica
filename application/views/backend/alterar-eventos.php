@@ -17,29 +17,20 @@
                         <div class="col-lg-12">
                             <?php
                             echo validation_errors('<div class="alert alert-danger">','</div>');
-                            echo form_open('admin/pessoal/salvar_alteracoes');
-                            
-                            foreach($this->modelpessoal->listar_pessoas() as $pessoal){
-                               
-                                   
+                            echo form_open('admin/eventos/salvar_alteracoes');
+                            foreach($listaeventos as $evento){
                             ?>
                             <div class="form-group">
-                                <label id="txt-nome">Nome</label>
-                                    <input type="text" id="txt-nome" name="txt-nome" class="form-control" placeholder="Informe o nome..." value="<?php echo $pessoal->nome ?>">
+                                <label id="txt-titulo">Título do evento</label>
+                                <input type="text" id="txt-titulo" name="txt-titulo" class="form-control" placeholder="Informe o título do evento..." value="<?php echo $evento->titulo ?>">
                                 </br>
-                                <label id="txt-cargo">Cargo</label>
-                                    <input type="text" id="txt-cargo" name="txt-cargo" class="form-control" placeholder="Informe o cargo atual..." value="<?php echo $pessoal->cargo ?>">
+                                <label id="txt-descricao">Descrição do evento</label>
+                                <input type="text" id="txt-descricao" name="txt-descricao" class="form-control" placeholder="Informe a descrição do evento..." value="<?php echo $evento->descricao ?>">
                                 </br>
-                                <label id="txt-lattes">Lattes</label>
-                                    <input type="text" name="txt-lattes" class="form-control" placeholder="Entre com a URL para o lattes..." value="<?php echo $pessoal->lattes ?>">
-                                </br>
-                                
-                                
                             </div>
-                            <input type="hidden" name="txt-id" id="txt-id" value="<?php echo $pessoal->id ?>">
+                            <input type="hidden" name="txt-id" id="txt-id" value="<?php echo $evento->id ?>">
                             <button type="submit" class="btn btn-success">Atualizar</button>
                             <?php
-                            
                             }
                             echo form_close();
                             ?>
