@@ -17,7 +17,7 @@
                         <div class="col-lg-12">
                             <?php
                             echo validation_errors('<div class="alert alert-danger">','</div>');
-                            echo form_open('admin/pessoal/inserir');
+                            echo form_open_multipart('admin/pessoal/inserir');
                             
                             
                             ?>
@@ -70,7 +70,25 @@
                                    
 
                                     $alterar= anchor(base_url('admin/pessoal/alterar/'.md5($pessoal->id)), '<i class="fa fa-refresh fa-fw"></i> Alterar');
-                                    $excluir=anchor(base_url('admin/pessoal/excluir/'.md5($pessoal->id)), '<span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span>');
+                                    $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$pessoal->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
+                                    echo $modal= ' <div class="modal fade excluir-modal-'.$pessoal->id.'" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de Pessoa</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h4>Deseja Realmente excluir a pessoa '.$pessoal->nome.'?</h4>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/pessoal/excluir/".md5($pessoal->id)).'">Excluir</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>';
 
                                     $this->table->add_row($nome, $cargo,$lattes, $alterar, $excluir);
 

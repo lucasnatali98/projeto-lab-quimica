@@ -43,10 +43,14 @@
             $dados['nome'] = $nome;
             $dados['cargo'] = $cargo;
             $dados['lattes'] = $lattes;
-            $dados['foto'] = $foto;
+            
             
             $this->db->where('id',$id);
             return $this->db->update('pessoal', $dados);
+            /*
+            Falta a atualização de imagem
+            */
+           
         }
 
         public function nova_foto($id, $foto){
