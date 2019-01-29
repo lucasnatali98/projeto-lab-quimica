@@ -34,7 +34,7 @@
                 </h2>
                 <p id="descricao-<?php echo $i; ?>"><?php echo $evento->descricao ?></p>
                 <center>
-                    <img style="margin-top: 10px;" src="<?php base_url("assets/frontend/img/eventos/".md5($evento->id).".jpg"); ?>" />
+                    <img style="margin-top: 10px;" src="<?php echo base_url("assets/frontend/img/eventos/".md5($evento->id).".jpg"); ?>" />
                 </center>
                 <hr>
             </div>

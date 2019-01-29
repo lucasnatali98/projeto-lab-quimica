@@ -43,7 +43,7 @@
         public function alterar_img($id){
             $dados['imagem']= 1;
             $this->db->where('md5(id)', $id);
-            return $this->db->update('eventos', $dados);
+            return $this->db->update('evento', $dados);
         }
     }   
 ?>
