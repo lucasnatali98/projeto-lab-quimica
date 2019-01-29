@@ -26,27 +26,6 @@
 	height: 200px;
 }
 
-.nav{
-    background-color: #FFFFFF;
-    font-family:  'NowRegular', sans-serif; font-weight: 100;
-    
-    font-size: 16px;
-    color: #2B2B2B;
-    position: relative;
-
-    width: auto;
-    height: auto;
-   
-    display: grid;
-    line-height: 50px;
-    grid-template-columns: repeat(8, 1fr);
-    grid-column-gap: 4px;
-   
-}
-
-nav .navbar-nav li a{
-  color: #000 !important;
-}
 
 a.nounderline:link 
 {
@@ -55,8 +34,8 @@ a.nounderline:link
 } 
 
 .logo{
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 30px;
 }
 
 
@@ -69,6 +48,24 @@ a.nounderline:link
     padding:5%;
     margin-top: 40px;
     
+}
+.navegacao{
+    margin-left: 8%;
+    font-family: NowRegular;
+    font-weight: normal; 
+   font-style: normal; 
+    margin-right: 8%;
+}
+.borda{
+    border-bottom:#2B2B2B;
+}
+
+.corrente{
+    background-color:#3172d5;
+}
+
+.nav-tabs>li.active>a {
+    background-color: #037c1d !important;
 }
 
 /*EVENTOS*/
