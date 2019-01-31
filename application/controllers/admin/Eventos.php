@@ -33,6 +33,7 @@ class Eventos extends CI_Controller {
 		}else{
 			$titulo = $this->input->post('txt-titulo');
 			$descricao = $this->input->post('txt-descricao');
+
 			if($this->modeleventos->adicionar($titulo, $descricao)){
 				redirect(base_url('admin/eventos'));
 			}else{
@@ -61,6 +62,38 @@ class Eventos extends CI_Controller {
 		$this->load->view('backend/alterar-eventos');
 		$this->load->view('backend/template/html-footer');
 	}
+
+	public function nova_foto(){
+
+		$this->load->model('eventos_model', 'modeleventos');
+
+		$id= $this->input->post('id');
+		$config['upload_path']= './assets/frontend/img/eventos';
+		$config['allowed_types']= 'jpg';
+		$config['file_name']= $id.".jpg";
+		$config['overwrite']= TRUE;
+		$this->load->library('upload', $config);
+
+		if(!$this->upload->do_upload()){
+			echo $this->upload->display_errors();
+		}
+		else {
+			$config2['source_image']= './assets/frontend/img/eventos/'.$id.'.jpg';
+			$config2['create_tumb']= FALSE;
+			$this->load->library('image_lib', $config2);
+			if($this->image_lib->resize()){
+				if($this->modeleventos->alterar_img($id)){
+	                redirect(base_url('admin/eventos/alterar/'.$id));
+	            }
+	            else {
+	                echo "Houve um erro no sistema!";
+	            }
+			}
+			else {
+				echo $this->image_lib->display_errors();
+			}
+		}
+    }
 
 	public function salvar_alteracoes(){
 		$this->load->library('form_validation');
