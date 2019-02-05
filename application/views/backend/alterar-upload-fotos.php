@@ -25,29 +25,34 @@
                             ?>
                             <div class="form-group">
                                 <label id="txt-nome">Nome</label>
-                                <input type="text" id="txt-nome" name="txt-nome" class="form-control" placeholder="Nomeie sua fotografia ..." value="<?php echo $foto->nome ?>">
+                                <input type="text" id="txt-nome" name="txt-nome" class="form-control" placeholder="Informe um nome para a fotografia ..." value="<?php echo $foto->nome ?>">
                                     
                                 <hr>
-                                <label id="txt-id_galeria">A foto pertence a qual galeria? </label>
+                                <label id="txt-id_galeria">Categoria </label>
+                                </br>
+                                <div class="col-lg-6">
+                                    <h4> Galerias: </h4>   
                                     <select id="txt-id_galeria" name="txt-id_galeria">
-                                        <!-- AQUI VAI TER UM FOREACH PARA BUSCAR TODAS AS GALERIAS EXISTENTES-->
-                                        <option value="1" <?php if($foto->id_galeria == "1"){ echo "selected";} ?> >Galeria</option>
+                                        <?php foreach($listagalerias as $galeria){ ?>
+                                          
+                                        <option value="<?php echo $galeria->id ?>" <?php if($foto->id_galeria == $galeria->id){ echo "selected";} ?> ><?php echo $galeria->nome; ?></option>
+                                        <?php } ?>
                                         <option value="0" <?php if($foto->id_galeria == "0"){ echo "selected";} ?> >---</option>
-                                        
-                                        
                                     </select>
-                                </br>
-                                <hr>
-                                <label id="txt-id_producao">A foto pertence a qual produção? </label>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4> Produções: </h4>   
                                     <select id="txt-id_producao" name="txt-id_producao">
-                                        <!-- AQUI VAI TER UM FOREACH PARA BUSCAR TODAS AS PRODUCOES EXISTENTES-->
-                                        <option value="1" <?php if($foto->id_producao == "1"){ echo "selected";} ?> >Produção X</option>
+                                        <?php foreach($listaproducoes as $producao){ ?>
+                                            <option value="<?php echo $producao->id ?>" <?php if($foto->id_producao == $galeria->id){echo "selected";} ?> ><?php echo $galeria->nome; ?></option>
+                                        <?php } ?>
                                         <option value="0" <?php if($foto->id_producao == "0"){ echo "selected";} ?> >---</option>
-
                                     </select>
-                                </br>        
-                                </br>        
-                                </br>
+                                </div>
+                                </br>                
+                                <hr>
+                                </br>                                    
+                                </br>                                    
                             </div>            
                             <input type="hidden" name="txt-id" id="txt-id" value="<?php echo $foto->id ?>">
                             <button type="submit" class="btn btn-success">Atualizar</button>
@@ -74,7 +79,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-lg-3 col-lg-offset-2">
+                        <div class="col-lg-8 col-lg-offset-1">
                             <?php 
                                 if($foto->imagem == 1){
                                     echo img("assets/frontend/img/fotos/".md5($foto->id).".jpg"); 

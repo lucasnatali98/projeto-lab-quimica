@@ -9,11 +9,15 @@ class Upload_fotos extends CI_Controller {
             redirect(base_url('admin/login'));
         }
         $this->load->model('uploadfotos_model','modelupload');
+        $this->load->model('galeria_model','modelgaleria');
+        //$this->load->model('producoes_model','modelproducoes');
     }
 
     public function index(){
         $this->load->library('table');
         $dados['listafotos'] = $this->modelupload->listar_fotos();
+        $dados['listagalerias'] = $this->modelgaleria->listar_galerias();
+        //$dados['listaproducoes'] = $this->modelproducoes->listar_producoes();
 
         $dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Fotos';
@@ -58,6 +62,8 @@ class Upload_fotos extends CI_Controller {
     public function alterar($id){
         $this->load->library('table');
         $dados['listafotos'] = $this->modelupload->listar_foto($id);
+        $dados['listagalerias'] = $this->modelgaleria->listar_galerias();
+ 
 
         $dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Fotos';
