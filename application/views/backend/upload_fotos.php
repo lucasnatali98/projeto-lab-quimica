@@ -22,26 +22,33 @@
                             ?>
                             <div class="form-group">
                                 <label id="txt-nome">Nome</label>
-                                <input type="text" id="txt-nome" name="txt-nome" class="form-control" placeholder="Nomeie sua fotografia ...">
+                                <input type="text" id="txt-nome" name="txt-nome" class="form-control" placeholder="Informe um nome para a fotografia ...">
                                     
                                 <hr>
-                                <label id="txt-id_galeria">A foto pertence a qual galeria? </label>
+                                <label id="txt-id_galeria">Categoria </label>
+                                </br>
+                                <div class="col-lg-6">
+                                    <h4> Galerias: </h4>   
                                     <select id="txt-id_galeria" name="txt-id_galeria">
-                                        <!-- AQUI VAI TER UM FOREACH PARA BUSCAR TODAS AS GALERIAS EXISTENTES-->
-                                        <option value="1">Galeria</option>
-                                        <option value="">---</option>
+                                        <?php foreach($listagalerias as $galeria){ ?>
+                                            <option value="<?php echo $galeria->id ?>"><?php echo $galeria->nome?></option> 
+                                        <?php } ?>
+                                        <option value="0">---</option>
                                     </select>
-                                </br>
-                                <hr>
-                                <label id="txt-id_producao">A foto pertence a qual produção? </label>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4> Produções: </h4>   
                                     <select id="txt-id_producao" name="txt-id_producao">
-                                        <!-- AQUI VAI TER UM FOREACH PARA BUSCAR TODAS AS PRODUCOES EXISTENTES-->
-                                        <option value="1">Produção X</option>
-                                        <option value="">---</option>
+                                        <?php foreach($listaproducoes as $producao){ ?>
+                                            <option value="<?php echo $producao->id ?>"><?php echo $producao->nome?></option> 
+                                        <?php } ?>
+                                        <option value="0">---</option>
                                     </select>
-                                </br>        
-                                </br>        
-                                </br>
+                                </div>
+                                </br>               
+                                <hr>
+                                </br>                
+                                </br>                
                             </div>            
                             <button type="submit" class="btn btn-success">Salvar</button>
                             <?php
@@ -73,7 +80,7 @@
                             }
                             </style>
                             <?php
-                                $this->table->set_heading("Foto", "Album", "Alterar", "Excluir");
+                                $this->table->set_heading("Foto", "Nome", "Alterar", "Excluir");
                                 foreach($listafotos as $foto){
                                     $nomefoto= $foto->nome;
                                     
