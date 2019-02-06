@@ -17,9 +17,9 @@
                         <div class="col-lg-12">
                             <?php
                             echo validation_errors('<div class="alert alert-danger">','</div>');
-                            echo form_open('admin/pessoal/salvar_alteracoes');
+                            echo form_open_multipart('admin/pessoal/salvar_alteracoes');
                             
-                            foreach($this->modelpessoal->listar_pessoas() as $pessoal){
+                            foreach($listapessoal as $pessoal){
                                
                                    
                             ?>

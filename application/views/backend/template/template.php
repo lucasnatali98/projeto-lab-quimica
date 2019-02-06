@@ -29,6 +29,9 @@
                         <a href="<?php echo base_url('admin/eventos') ?>"><i class="fa fa-building fa-fw"></i> Eventos</a>
                     </li>
                     <li>
+                        <a href="<?php echo base_url('admin/galeria') ?>"><i class="fa fa-picture-o fa-fw"></i> Galeria</a>
+                    </li>
+                    <li>
                         <a href="<?php echo base_url('admin/upload_fotos') ?>"><i class="fa fa-upload fa-fw"></i> Upload de Fotos</a>
                     </li>
                     <li>
