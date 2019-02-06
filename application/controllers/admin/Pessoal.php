@@ -47,12 +47,12 @@ class Pessoal extends CI_Controller {
 			$this->load->library('upload', $configuracao);	
 			$this->upload->initialize($configuracao);
 		
-				if($this->upload->do_upload('txt-foto')){
-					if($this->modelpessoal->adicionar($nome, $cargo, $lattes, $new_name)){
-							redirect(base_url('admin/pessoal'));
-					}else{
-						echo "Houve um erro no sistema!";
-					}
+			if($this->upload->do_upload('txt-foto')){
+				if($this->modelpessoal->adicionar($nome, $cargo, $lattes, $new_name)){
+						redirect(base_url('admin/pessoal'));
+				}else{
+					echo "Houve um erro no sistema!";
+				}
 			}
 		}
 	}
