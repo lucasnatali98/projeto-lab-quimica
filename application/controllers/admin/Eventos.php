@@ -13,8 +13,8 @@ class Eventos extends CI_Controller {
 
 	public function index(){
 		$this->load->library('table');
-        $dados['listaeventos'] = $this->modeleventos->listar_eventos();
-
+		$dados['listaeventos'] = $this->modeleventos->listar_eventos();
+		
 		$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Eventos';
 
@@ -28,13 +28,15 @@ class Eventos extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('txt-titulo','Titulo do Evento','required|min_length[3]|is_unique[evento.titulo]');
 		$this->form_validation->set_rules('txt-descricao','Descricao do Evento','required|min_length[10]');
+		$this->form_validation->set_rules('txt-ano','Ano do Evento','required');
 		if($this->form_validation->run() == FALSE){
 			$this->index();
 		}else{
 			$titulo = $this->input->post('txt-titulo');
 			$descricao = $this->input->post('txt-descricao');
+			$ano = $this->input->post('txt-ano');
 
-			if($this->modeleventos->adicionar($titulo, $descricao)){
+			if($this->modeleventos->adicionar($titulo, $descricao, $ano)){
 				redirect(base_url('admin/eventos'));
 			}else{
 				echo "Houve um erro no sistema!";
@@ -105,7 +107,9 @@ class Eventos extends CI_Controller {
 			$id = $this->input->post('txt-id');
 			$titulo = $this->input->post('txt-titulo');
 			$descricao = $this->input->post('txt-descricao');
-			if($this->modeleventos->alterar($id, $titulo, $descricao)){
+			$ano = $this->input->post('txt-ano');
+
+			if($this->modeleventos->alterar($id, $titulo, $descricao, $ano)){
 				redirect(base_url('admin/eventos'));
 			}else{
 				echo "Houve um erro no sistema!";
