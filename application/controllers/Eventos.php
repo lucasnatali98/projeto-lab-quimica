@@ -9,7 +9,8 @@
         
         public function index($id, $slug=null){
             $dados['listaeventos'] = $this->modeleventos->listar_eventos();
-            $dados['listaevento'] = $this->modeleventos->listar_evento($id);
+            $dados['listaDeAnos'] = $this->modeleventos->listar_anos();
+            
             
             $this->load->view('frontend/template/html-header', $dados);
             $this->load->view('frontend/template/header');

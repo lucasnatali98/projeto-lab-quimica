@@ -26,6 +26,9 @@
                                 <label id="txt-descricao">Descrição do evento</label>
                                 <input type="text" id="txt-descricao" name="txt-descricao" class="form-control" placeholder="Informe a descrição do evento...">
                                 </br>
+                                <label id="txt-ano">Ano do evento</label>
+                                <input type="text" id="txt-ano" name="txt-ano" class="form-control" placeholder="Informe o ano do evento...">
+                                </br>
                             </div>
                             <button type="submit" class="btn btn-success">Salvar</button>
                             <?php
