@@ -8,38 +8,35 @@
     color: #222;
     margin-bottom: 20px;
     margin-top: 40px;">Eventos</h2>
+
     <div class="anos">
         <ul>
-            <li><a href="#">2019</a></li>
-            <li><a href="#">2018</a></li>
-            <li><a href="#">2017</a></li>
-            <li><a href="#">2016</a></li>
-            <li><a href="#">2015</a></li>
-            <li><a href="#">2014</a></li>
-            <li><a href="#">2013</a></li>
-            <li><a href="#">2012</a></li>
-            <li><a href="#">2011</a></li>
-            <li><a href="#">2010</a></li>
-            <li><a href="#">2009</a></li>
+            <li>
+                <?php foreach($listaDeAnos as $ano){?>
+                    <a href="#<?php echo $ano ?>"><?php echo $ano ?> | </a> 
+                <?php }?>
+            </li>
         </ul>
     </div>
-    <h2 class="anoTxt">2019</h2>
-
-
-        <?php $i=1; foreach($listaeventos as $evento) {?>
-            
-            <div class="evento">
-                <h2>
-                    <?php echo $evento->titulo?> 
-                </h2>
-                <p id="descricao-<?php echo $i; ?>"><?php echo $evento->descricao ?></p>
-                <center>
-                    <img style="    margin-top: 10px;" src="http://adoracaoevida.com/www/wp-content/gallery/eu-fui_1/foto_teste_2.jpg" />
-                </center>
-                <hr>
-            </div>
-
-        <?php $i++; } ?>
+    <?php foreach($listaDeAnos as $ano){?>
+        <h2 id="<?php echo $ano ?>" class="anoTxt"><?php echo $ano ?></h2> 
+        
+        <?php $i=0; foreach($listaeventos as $evento) {
+            if($evento->ano == $ano){?>                
+                <div class="evento">
+                    <h2>
+                        <?php echo $evento->titulo?> 
+                    </h2>
+                    <p id="descricao-<?php echo $i; ?>"><?php echo $evento->descricao ?></p>
+                    <center>
+                        <img style="margin-top: 10px;" src="<?php echo base_url("assets/frontend/img/eventos/".md5($evento->id).".jpg"); ?>" />
+                    </center>
+                    <hr>
+                </div>
+        <?php $i++; }
+        }
+    }
+      ?>
 
     
 

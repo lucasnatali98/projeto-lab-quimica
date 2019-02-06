@@ -26,6 +26,9 @@
                                 <label id="txt-descricao">Descrição do evento</label>
                                 <input type="text" id="txt-descricao" name="txt-descricao" class="form-control" placeholder="Informe a descrição do evento...">
                                 </br>
+                                <label id="txt-ano">Ano do evento</label>
+                                <input type="text" id="txt-ano" name="txt-ano" class="form-control" placeholder="Informe o ano do evento...">
+                                </br>
                             </div>
                             <button type="submit" class="btn btn-success">Salvar</button>
                             <?php
@@ -50,36 +53,28 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <?php
-                                $this->table->set_heading("Título do evento", "Alterar", "Excluir");
-                                foreach($listaeventos as $evento){
-                                    $nomeproj= $evento->titulo;
-                                    $alterar= anchor(base_url('admin/eventos/alterar/'.md5($evento->id)), '<i class="fa fa-refresh fa-fw"></i> Alterar');
-
-                                    $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$evento->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
-                                    echo $modal= ' <div class="modal fade excluir-modal-'.$evento->id.'" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-
-                                            <div class="modal-header">
-                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de evento</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Deseja Realmente excluir o evento '.$evento->titulo.'?</h4>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/eventos/excluir/".md5($evento->id)).'">Excluir</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>';
-
-                                    $this->table->add_row($nomeproj, $alterar, $excluir);
+                            <style>
+                                img {
+                                    width: 200px;
+                                    height: 120px;
                                 }
+                            </style>
+                            <?php
+                                $this->table->set_heading("Imagem", "Título", "Alterar", "Excluir");
+                                foreach($listaeventos as $evento){
+                                    if($evento->imagem == 1){
+                                        $fotosevento = img("assets/frontend/img/eventos/".md5($evento->id).".jpg");
+                                    }
+                                    else {
+                                        $fotosevento = img("assets/frontend/img/eventos/SemFoto.png");
+                                    }
+                                    $alterar = anchor(base_url('admin/eventos/alterar/'.md5($evento->id)), '<i class="fa fa-refresh fa-fw"></i>Alterar');
+                                    $excluir = anchor(base_url('admin/eventos/excluir/'.md5($evento->id)), '<i class="fa fa-remove fa-fw"></i>Excluir');
+                                    $this->table->add_row($fotosevento, $evento->titulo,$alterar, $excluir);
+                                }
+
                                 $this->table->set_template(array('table_open' => '<table class="table table-striped">'));
-                                   echo $this->table->generate();
+                                echo $this->table->generate();
                             ?>
                                           
                         </div>
