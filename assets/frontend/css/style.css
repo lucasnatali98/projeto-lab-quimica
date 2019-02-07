@@ -68,6 +68,7 @@ a.nounderline:link
     background-color: #037c1d !important;
 }
 
+
 /*EVENTOS*/
 .evento h2{
     font-size: 20px;
@@ -89,7 +90,7 @@ a.nounderline:link
 
 
 /*
- PRODUÇÕES e EVENTOS
+ PRODUÇÕES
 */
 .card-header{
     background-color: #fff;
