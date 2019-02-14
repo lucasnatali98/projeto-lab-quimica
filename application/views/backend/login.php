@@ -9,7 +9,7 @@
 
                         <?php
                             echo validation_errors('<div class="alert alert-danger">','</div>');
-                            echo form_open('admin/usuarios/login');
+                            echo form_open('admin/pessoal/login');
                          ?>
                             <fieldset>
                                 <div class="form-group">

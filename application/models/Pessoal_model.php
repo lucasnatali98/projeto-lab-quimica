@@ -7,6 +7,9 @@
         public $cargo;
         public $lattes;
         public $foto;
+        public $user;
+        public $senha;
+        public $tipo;
         
 
         public function __construct(){
@@ -24,11 +27,13 @@
             return $this->db->get()->result();
         }
 
-        public function adicionar($nome, $cargo, $lattes, $foto){
+        public function adicionar($nome, $cargo, $lattes, $user, $senha, $tipo){
             $dados['nome'] = $nome;
             $dados['cargo'] = $cargo;
             $dados['lattes'] = $lattes;
-            $dados['foto'] = $foto;
+            $dados['user'] = $user;
+            $dados['senha'] = md5($senha);
+            $dados['tipo'] = $tipo;
             
             
             return $this->db->insert('pessoal',$dados); 
@@ -39,26 +44,23 @@
             return $this->db->delete('pessoal');
         }
 
-        public function alterar($id, $nome, $cargo, $lattes, $foto){
+        public function alterar($id, $nome, $cargo, $lattes, $user, $senha, $tipo){
             $dados['nome'] = $nome;
             $dados['cargo'] = $cargo;
             $dados['lattes'] = $lattes;
-            
+            $dados['user'] = $user;
+            $dados['senha'] = md5($senha);
+            $dados['tipo'] = $tipo;
             
             $this->db->where('id',$id);
+            return $this->db->update('pessoal', $dados);   
+        }
+
+        public function alterar_img($id){
+            $dados['foto']= 1;
+            $this->db->where('md5(id)', $id);
             return $this->db->update('pessoal', $dados);
-            /*
-            Falta a atualização de imagem
-            */
-           
         }
-
-        public function nova_foto($id, $foto){
-            $dados['foto'] = $foto;
-          $this->db->where('id',$id);
-          return $this->db->update('pessoal',$dados);
-        }
-
         
     }   
 ?>

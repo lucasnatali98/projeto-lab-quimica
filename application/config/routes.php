@@ -58,5 +58,5 @@ $route['pessoal'] = 'pessoal/index/';
 $route['eventos'] = 'eventos/index/';
 $route['galeria'] = 'galeria/index/';
 $route['upload_fotos'] = 'upload_fotos/index/';
-$route['admin/login'] = 'admin/usuarios/pag_login';
+$route['admin/login'] = 'admin/pessoal/pag_login';
 
