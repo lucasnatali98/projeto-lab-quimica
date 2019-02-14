@@ -9,8 +9,8 @@
         }
         
         public function index($id, $slug=null){
-            $dados['listagalerias'] = $this->modelupload->listar_galerias();
-            $dados['listagaleria'] = $this->modelupload->listar_galeria($id); 
+            $dados['listagalerias'] = $this->modelgaleria->listar_galerias();
+            $dados['listagaleria'] = $this->modelgaleria->listar_galeria($id); 
             $this->load->view('frontend/template/html-header', $dados);
             $this->load->view('frontend/template/header');
             $this->load-> view('frontend/galeria'); 

@@ -41,7 +41,7 @@
                         <a href="<?php echo base_url('admin/contatos') ?>"><i class="fa fa-phone fa-fw"></i> Contatos</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/usuarios/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
+                        <a href="<?php echo base_url('admin/pessoal/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
                     </li>
                 </ul>
             </div>

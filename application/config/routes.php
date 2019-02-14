@@ -53,9 +53,10 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['projetos'] = 'projetos/index/';
+$route['producoes'] = 'producoes/index/';
 $route['pessoal'] = 'pessoal/index/';
 $route['eventos'] = 'eventos/index/';
 $route['galeria'] = 'galeria/index/';
 $route['upload_fotos'] = 'upload_fotos/index/';
-$route['admin/login'] = 'admin/usuarios/pag_login';
+$route['admin/login'] = 'admin/pessoal/pag_login';
 
