@@ -121,7 +121,7 @@ class Pessoal extends CI_Controller {
             $this->load->library('image_lib', $config2);
             if($this->image_lib->resize()){
                 if($this->modelpessoal->alterar_img($id)){
-                    redirect(base_url('admin/pessoas/alterar/'.$id));
+                    redirect(base_url('admin/pessoal/alterar/'.$id));
                 }
                 else {
                     echo "Houve um erro no sistema!";

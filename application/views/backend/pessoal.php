@@ -81,10 +81,8 @@
                                 foreach($listapessoas as $pessoal){
                                     $nome= $pessoal->nome;
                                     
-                                    $foto= $pessoal->foto;
-                                    
                                     if($pessoal->foto == 1){
-                                        $foto= img("assets/frontend/img/pessoal/".md5($pessoal->id).".jpg"); 
+                                        $foto= img("assets/frontend/img/pessoas/".md5($pessoal->id).".jpg"); 
                                     }else{
                                         $foto= img("assets/frontend/img/semfoto.jpg");
                                     }
