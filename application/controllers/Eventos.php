@@ -7,10 +7,10 @@
             $this->load->model('eventos_model','modeleventos');
         }
         
-        public function index($id, $slug=null){
+        public function index($ano=2019, $slug=null){
             $dados['listaeventos'] = $this->modeleventos->listar_eventos();
+            $dados['listaevento'] = $this->modeleventos->listar_evento($ano);
             $dados['listaDeAnos'] = $this->modeleventos->listar_anos();
-            
             
             $this->load->view('frontend/template/html-header', $dados);
             $this->load->view('frontend/template/header');
