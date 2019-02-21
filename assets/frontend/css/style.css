@@ -172,3 +172,24 @@ a.nounderline:link
 .media-div button{
     width: 25%;    
 }
+
+/*PESSOAL*/
+#pessoal #img-pessoal{
+    width: 300px;
+    height: 140px;    
+}
+
+#pessoal .pessoal-nome{
+    color:#FF6D1A; 
+    font-size: 30px;
+}
+
+#pessoal .pessoal-cargo{
+    color:#2B2B2B; 
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+#pessoal .pessoal-lattes{
+    margin-top: -10px;
+}
