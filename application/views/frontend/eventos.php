@@ -12,7 +12,7 @@
         <ul>
             <li>
                 <?php foreach($listaDeAnos as $ano){?>
-                    <a onclick="selecionarAno(<?php echo $ano ?>)"  href="<?php echo base_url('/eventos/'.$ano) ?>"><?php echo $ano ?> | </a> 
+                    <a href="<?php echo base_url('/eventos/'.$ano) ?>"><?php echo $ano ?> | </a> 
                 <?php }?>
             </li>
         </ul>
