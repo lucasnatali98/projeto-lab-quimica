@@ -22,9 +22,10 @@
             return $this->db->get()->result();
         }
 
-        public function adicionar($titulo, $descricao){
+        public function adicionar($titulo, $descricao,$ano){
             $dados['titulo'] = $titulo;
             $dados['descricao'] = $descricao;
+            $dados['ano'] = $ano;
             return $this->db->insert('projeto',$dados); 
         }
 
@@ -33,9 +34,10 @@
             return $this->db->delete('projeto');
         }
 
-        public function alterar($id, $titulo, $descricao){
+        public function alterar($id, $titulo, $descricao,$ano){
             $dados['titulo'] = $titulo;
             $dados['descricao'] = $descricao;
+            $dados['ano'] = $ano;
             $this->db->where('id',$id);
             return $this->db->update('projeto', $dados);
         }

@@ -356,6 +356,7 @@ CREATE TABLE `producao` (
   `titulo` varchar(80) CHARACTER SET utf8 NOT NULL,
   `descricao` longtext CHARACTER SET utf8 NOT NULL,
   `data` datetime NOT NULL,
+   `ano` int(11) NOT NULL,
   `arquivo` varchar(60) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Produções científicas e papers publicados da Pós Graduação e';
 
