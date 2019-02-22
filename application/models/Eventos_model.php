@@ -28,10 +28,10 @@
             return array_unique($listaDeAnos);
         }
 
-        public function listar_evento($id){
-            $this->db->order_by('titulo','ASC');
+        public function listar_evento($ano){
+            $this->db->order_by('ano','ASC');
             $this->db->from('evento');
-            $this->db->where('md5(id)',$id);
+            $this->db->where('evento.ano',$ano);
             return $this->db->get()->result();
         }
 
