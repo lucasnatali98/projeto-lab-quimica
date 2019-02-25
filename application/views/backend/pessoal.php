@@ -44,6 +44,9 @@
                                 </br>
                                 <label id="txt-senha">Senha</label>
                                     <input type="password" id="txt-senha" name="txt-senha" class="form-control" placeholder="Informe uma senha de acesso para o usuário ...">
+                                    </br>
+                                <label id="txt-confir-senha">Confirmar Senha</label>
+                                    <input type="password" id="txt-confir-senha" name="txt-confir-senha" class="form-control" placeholder="Confirme a senha de acesso do usuário ...">
                                 </br>
                                   
                                 </br>

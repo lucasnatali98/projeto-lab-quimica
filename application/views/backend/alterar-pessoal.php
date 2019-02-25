@@ -47,12 +47,12 @@
                                     <input type="text" id="txt-user" name="txt-user" class="form-control" placeholder="Informe o username ..." value="<?php echo $pessoal->user ?>">
                                 </br>
                                 <label id="txt-senha">Senha</label>
-                                    <input type="password" id="txt-senha" name="txt-senha" class="form-control" placeholder="Informe uma senha de acesso para o usuário ..." value="<?php echo $pessoal->senha ?>">
+                                    <input type="password" id="txt-senha" name="txt-senha" class="form-control" placeholder="Informe uma senha de acesso para o usuário ..." >
                                 </br>
+                                <label id="txt-confir-senha">Confirmar Senha</label>
+                                    <input type="password" id="txt-confir-senha" name="txt-confir-senha" class="form-control" placeholder="Confirme a senha de acesso do usuário ...">
                                                
-                                <hr>
-                                </br>                                    
-                                </br>                                    
+                                <hr>                                                                 
                             </div>            
                             <input type="hidden" name="txt-id" id="txt-id" value="<?php echo $pessoal->id ?>">
                             <button type="submit" class="btn btn-success">Atualizar</button>

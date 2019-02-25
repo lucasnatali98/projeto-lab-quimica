@@ -35,6 +35,7 @@ class Pessoal extends CI_Controller {
     		$this->form_validation->set_rules('txt-cargo','Cargo','required|min_length[5]');
     		$this->form_validation->set_rules('txt-user','User','required|min_length[3]|is_unique[pessoal.user]');
             $this->form_validation->set_rules('txt-senha','Senha','required|min_length[3]');
+            $this->form_validation->set_rules('txt-confir-senha','Confirmar Senha','required|matches[txt-senha]');
     		$this->form_validation->set_rules('txt-tipo','Funcao');
 
             if($this->form_validation->run() == FALSE){
@@ -146,6 +147,7 @@ class Pessoal extends CI_Controller {
     		$this->form_validation->set_rules('txt-cargo','Cargo','required|min_length[5]');
     		$this->form_validation->set_rules('txt-user','User','required|min_length[3]');
             $this->form_validation->set_rules('txt-senha','Senha','required|min_length[3]');
+            $this->form_validation->set_rules('txt-confir-senha','Confirmar Senha','required|matches[txt-senha]');
     		$this->form_validation->set_rules('txt-tipo','Funcao');
 
             if($this->form_validation->run() == FALSE){
