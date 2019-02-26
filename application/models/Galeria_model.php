@@ -34,10 +34,8 @@
             return array_unique($listaAnos);
         }
 
-        public function exibeImagem($id){
-            $this->load->model('uploadfotos_model','modelupload');
-            return $this->modelupload->listar_foto($id);
-        }
+        
+        
         
 
         public function adicionar($nome, $descricao, $data){
