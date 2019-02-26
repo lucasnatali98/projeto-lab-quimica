@@ -3,7 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Fev-2019 às 19:01
+
+-- Generation Time: 26-Fev-2019 às 19:36
+
 -- Versão do servidor: 10.1.35-MariaDB
 -- versão do PHP: 7.2.9
 
@@ -382,8 +384,9 @@ CREATE TABLE `foto` (
 
 INSERT INTO `foto` (`id`, `nome`, `imagem`, `id_galeria`, `id_producao`) VALUES
 (44, 'Foto 2', 1, 4, 0),
-(45, 'Foto 1', 1, 5, 0),
-(49, 'Foto 4', 0, 2, 0);
+
+(45, 'Foto 3', 0, 5, 0);
+
 
 -- --------------------------------------------------------
 
