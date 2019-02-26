@@ -22,6 +22,23 @@
             $this->db->where('md5(id)',$id);
             return $this->db->get()->result();
         }
+        public function listar_anos()
+        {
+            $this->db->order_by('data','DESC');
+            $galeria = $this->db->get('galeria')->result();
+            
+            for($i=0; $i < count($galeria); $i++){
+                $aux = date('Y-m-d',strtotime(str_replace('-','/',$galeria[$i]->data)));
+                $listaAnos[$i] =  date('Y',strtotime(str_replace('-','/',$aux)));
+            }
+            return array_unique($listaAnos);
+        }
+
+        public function exibeImagem($id){
+            $this->load->model('uploadfotos_model','modelupload');
+            return $this->modelupload->listar_foto($id);
+        }
+        
 
         public function adicionar($nome, $descricao, $data){
             $dados['nome'] = $nome;
