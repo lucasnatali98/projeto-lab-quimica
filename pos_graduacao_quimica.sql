@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Fev-2019 às 17:42
+-- Generation Time: 26-Fev-2019 às 19:36
 -- Versão do servidor: 10.1.35-MariaDB
 -- versão do PHP: 7.2.9
 
@@ -345,7 +345,7 @@ INSERT INTO `evento` (`id`, `titulo`, `descricao`, `imagem`, `ano`) VALUES
 CREATE TABLE `foto` (
   `id` int(11) NOT NULL,
   `nome` varchar(150) NOT NULL,
-  `imagem` int(11) DEFAULT NULL,
+  `imagem` int(11) NOT NULL,
   `id_galeria` int(11) NOT NULL,
   `id_producao` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -357,7 +357,7 @@ CREATE TABLE `foto` (
 INSERT INTO `foto` (`id`, `nome`, `imagem`, `id_galeria`, `id_producao`) VALUES
 (43, 'Foto 1', 1, 2, 0),
 (44, 'Foto 2', 1, 4, 0),
-(45, 'Foto 3', NULL, 5, 0);
+(45, 'Foto 3', 0, 5, 0);
 
 -- --------------------------------------------------------
 
